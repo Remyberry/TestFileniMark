@@ -4,17 +4,21 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdminDashboard extends AppCompatActivity {
 
@@ -30,37 +34,39 @@ public class AdminDashboard extends AppCompatActivity {
         ImageView report_nav = findViewById(R.id.report_nav_ci);
         ImageView list_nav = findViewById(R.id.list_nav);
 
-        home_nav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AdminDashboard.this, AdminDashboard.class));
-            }
-        });
+        List<Loan> loanList = new ArrayList<>();
 
-        info_nav.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        // Add some sample loan data (replace with your actual data population logic)
+        loanList.add(new Loan("John Doe", "2024-05-20", 100.00));
+        loanList.add(new Loan("Jane Smith", "2024-06-15", 150.00));
+
+
+        // Initialize the RecyclerView
+        RecyclerView recyclerView = findViewById(R.id.recyclerViewCust);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this)); // Set layout manager
+
+        // Create the adapter and set the data
+        // Your adapter class
+        LoanAdapter adapter = new LoanAdapter(loanList);
+        recyclerView.setAdapter(adapter);
+
+        home_nav.setOnClickListener(v -> startActivity(new Intent(AdminDashboard.this, AdminDashboard.class)));
+
+        info_nav.setOnClickListener((v -> {
 //                startActivity(new Intent(AdminDashboard.this, CustomerInfo.class));
-                Intent intent = new Intent(AdminDashboard.this, CustomerInfo.class);
+            Intent intent = new Intent(AdminDashboard.this, CustomerInfo.class);
 //                intent.putExtra("key", "joshuayalung555@gmail.com");
-                startActivity(intent);
-            }
+            startActivity(intent);
         }));
 
-        addloan_nav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AdminDashboard.this, LoanPosting.class);
-                startActivity(intent);
-            }
+        addloan_nav.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminDashboard.this, LoanPosting.class);
+            startActivity(intent);
         });
 
-        collect_nav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AdminDashboard.this, Collection.class);
-                startActivity(intent);
-            }
+        collect_nav.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminDashboard.this, Collection.class);
+            startActivity(intent);
         });
 
 
@@ -71,7 +77,7 @@ public class AdminDashboard extends AppCompatActivity {
         StorageReference imageRef = storageRef.child("images/lanielsicangco@gmail.com");
 
         // Download the image into a local file
-        File localFile = null;
+        File localFile;
         try {
             localFile = File.createTempFile("image", "jpg", getCacheDir());
         } catch (IOException e) {
@@ -87,7 +93,9 @@ public class AdminDashboard extends AppCompatActivity {
                 })
                 .addOnFailureListener(exception -> {
                     // Handle any errors
-                    //Log.e("TAG", "Error downloading image: " + exception.getMessage());
+                    Log.e("TAG", "Error downloading image: " + exception.getMessage());
                 });
+
+
     }
 }
