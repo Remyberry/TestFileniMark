@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">LendEase</string>
+    <string name="due_date">Due Date:</string>
+    <string name="overview">OVERVIEW</string>
+    <string name="todo">TODO</string>
+    <string name="paid">Paid</string>
+    <string name="due">Due</string>
+    <string name="overdue">Overdue</string>
+    <string name="total">Total</string>
+    <string name="test">test</string>
+    <string name="for_this_week">For This Week</string>
+    <string name="due_this_week">Due This Week</string>
+    <string name="sort_by">Sort By</string>
+    <string name="userprofile">userprofile</string>
 
     <string-array name="payment_options_array">
         <item>Monthly</item>
