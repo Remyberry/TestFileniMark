@@ -29,7 +29,7 @@
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
-          tools:src="@tools:sample/avatars"
+          android:src="@drawable/user"
           android:contentDescription="@string/userprofile" />
 
       <TextView

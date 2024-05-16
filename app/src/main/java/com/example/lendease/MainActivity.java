@@ -10,13 +10,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.List;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -112,4 +110,15 @@ public class MainActivity extends AppCompatActivity {
                     });
         });
     }
+//    @Override
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        super.onWindowFocusChanged(hasFocus);
+//        if (hasFocus) {
+//            getWindow().getDecorView().setSystemUiVisibility(
+//                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // Hide navigation bar
+//                            | View.SYSTEM_UI_FLAG_FULLSCREEN    // Hide status bar
+//                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY // Keep bars hidden
+//            );
+//        }
+//    }
 }
