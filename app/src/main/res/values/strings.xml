@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">LendEase</string>
+
+    <string-array name="payment_options_array">
+        <item>Monthly</item>
+        <item>Weekly</item>
+    </string-array>
+    <string-array name="loan_duration_array">
+        <item></item>
+        <item>6</item>
+        <item>12</item>
+        <item>24</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="loan_choice_array">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </string-array>
+</resources>
