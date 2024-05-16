@@ -171,7 +171,7 @@ public class LoanPosting extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
                 // Do nothing
             }
-        });
+        });//aqwdhiausf
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

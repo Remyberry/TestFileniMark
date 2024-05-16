@@ -63,7 +63,7 @@
           android:text="Due Date:"
           android:textColor="@android:color/white"
           app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toStartOf="@+id/textView2"
+          app:layout_constraintEnd_toStasdrtOf="@+id/textView2"
           app:layout_constraintHorizontal_bias="0.972"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
@@ -77,7 +77,7 @@
           android:textColor="@android:color/white"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintTop_toTopOf="@+id/imageView2"
-          tools:text="<Amount>" />
+          tools:text="<balbdalsbdal>" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
