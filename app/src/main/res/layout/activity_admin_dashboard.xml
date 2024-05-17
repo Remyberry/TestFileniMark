@@ -5,31 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminDashboard">
+    tools:context=".AdminDashboard"
+    android:layout_gravity="bottom">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCust"
-        android:layout_width="340dp"
-        android:layout_height="544dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="342dp"
+        android:layout_height="483dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintVertical_bias="0.314"
         tools:listitem="@layout/recycler_view_item" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewCust"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grey"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/grey" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
@@ -194,14 +193,14 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/due_this_week"
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerViewCust"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.384" />
 
     <TextView
         android:id="@+id/textView14"
@@ -218,20 +217,16 @@
         app:layout_constraintVertical_bias="0.538" />
 
     <androidx.appcompat.widget.Toolbar
+        android:gravity="bottom"
         android:id="@+id/toolbar"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="683dp"
         android:background="@drawable/nav"
-        android:minHeight="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727" />
-
+        app:layout_constraintStart_toStartOf="parent"/>
     <ImageView
         android:id="@+id/home_nav"
         android:layout_width="32dp"
@@ -366,7 +361,6 @@
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/list_nav"
         app:layout_constraintTop_toBottomOf="@+id/list_nav" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

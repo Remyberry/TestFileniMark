@@ -62,6 +62,17 @@ public class LoanPosting extends AppCompatActivity {
     private FirebaseFirestore db;
     private static final String TAG = "LoanPosting";
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()); // Class level dateFormat
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // Hide navigation bar
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN    // Hide status bar
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY // Keep bars hidden
+            );
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

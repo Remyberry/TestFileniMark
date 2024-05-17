@@ -52,7 +52,7 @@
         android:ems="10"
         android:hint="E-mail"
         android:inputType="text"
-        android:text="jiriellsicangco@gmail.com"
+        android:text="markangel."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/loUser"
         app:layout_constraintHorizontal_bias="0.49"

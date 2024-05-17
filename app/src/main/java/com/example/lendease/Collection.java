@@ -452,4 +452,15 @@ public class Collection extends AppCompatActivity {
                     //Log.e("TAG", "Error downloading image: " + exception.getMessage());
                 });
     }
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // Hide navigation bar
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN    // Hide status bar
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY // Keep bars hidden
+            );
+        }
+    }
 }

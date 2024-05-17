@@ -22,7 +22,7 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="412dp"
+        android:layout_width="match_parent"
         android:layout_height="198dp"
         android:background="#3C3F41"
         app:layout_constraintEnd_toEndOf="parent"
@@ -372,7 +372,7 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/idEditText"
         android:layout_width="97dp"
         android:layout_height="23dp"
         android:layout_marginTop="48dp"

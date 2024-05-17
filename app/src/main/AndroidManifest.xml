@@ -15,6 +15,9 @@
         android:theme="@style/Theme.LendEase"
         tools:targetApi="31">
         <activity
+            android:name=".LoanInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoanPosting"
             android:exported="false" />
         <activity

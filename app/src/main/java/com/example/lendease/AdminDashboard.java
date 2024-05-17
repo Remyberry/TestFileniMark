@@ -39,6 +39,8 @@ public class AdminDashboard extends AppCompatActivity {
         loanList.add(new Loan("John Doe", "2024-05-20", 100.00));
         loanList.add(new Loan("Jane Smith", "2024-06-15", 150.00));
         loanList.add(new Loan("Jerry Smith", "2024-06-15", 1.00));
+        loanList.add(new Loan("Jerry Smith", "2024-06-15", 1.00));
+        loanList.add(new Loan("Jerry Smith", "2024-06-15", 1.00));
         loanList.add(new Loan("Dexter Bading", "2024-06-15", 9600.00));
         loanList.add(new Loan("John Doe", "2024-05-20", 100.00));
         loanList.add(new Loan("John Doe", "2024-05-20", 100.00));
@@ -87,7 +89,9 @@ public class AdminDashboard extends AppCompatActivity {
             }
         });
 
-//
+
+
+
 //        FirebaseStorage storage = FirebaseStorage.getInstance();
 //        StorageReference storageRef = storage.getReference();
 //
@@ -113,7 +117,19 @@ public class AdminDashboard extends AppCompatActivity {
 //                    // Handle any errors
 //                    //Log.e("TAG", "Error downloading image: " + exception.getMessage());
 //                });
+//
+//
+    }
 
-
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // Hide navigation bar
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN    // Hide status bar
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY // Keep bars hidden
+            );
+        }
     }
 }

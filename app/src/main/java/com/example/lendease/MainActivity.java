@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         TextView admin_forgot_password = findViewById(R.id.admin_forgot_password);
         TextView admin_to_useraccount = findViewById(R.id.user_to_adminaccount);
 
-        admin_password.setText("Jiriel123*");
+        admin_email.setText("markangel.gonzales123@gmail.com");
+        admin_password.setText("Markpagado2004!!!");
 
         admin_to_useraccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,15 +111,15 @@ public class MainActivity extends AppCompatActivity {
                     });
         });
     }
-//    @Override
-//    public void onWindowFocusChanged(boolean hasFocus) {
-//        super.onWindowFocusChanged(hasFocus);
-//        if (hasFocus) {
-//            getWindow().getDecorView().setSystemUiVisibility(
-//                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // Hide navigation bar
-//                            | View.SYSTEM_UI_FLAG_FULLSCREEN    // Hide status bar
-//                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY // Keep bars hidden
-//            );
-//        }
-//    }
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // Hide navigation bar
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN    // Hide status bar
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY // Keep bars hidden
+            );
+        }
+    }
 }

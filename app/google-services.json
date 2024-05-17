@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "755131284781",
-    "project_id": "lendeasedb",
-    "storage_bucket": "lendeasedb.appspot.com"
+    "project_number": "563735812272",
+    "project_id": "lendease-df0c6",
+    "storage_bucket": "lendease-df0c6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:755131284781:android:38543a9d2ff3bfceee67a4",
+        "mobilesdk_app_id": "1:563735812272:android:24f51e4925b8f28a9c0375",
         "android_client_info": {
           "package_name": "com.example.lendease"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCDNmA4X96F7i0AlVVXqW1ukLyNNikiDDQ"
+          "current_key": "AIzaSyBaUErRN5snsjSyiNG0zHLIIHmyO__wTP0"
         }
       ],
       "services": {
